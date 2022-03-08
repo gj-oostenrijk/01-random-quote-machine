@@ -16,6 +16,10 @@ body {
   justify-content: center;
 }
 
+#markdownPreviewer {
+  text-align: center;
+}
+
 a {
   color: white;
 }
