@@ -17,6 +17,9 @@ export default function App() {
             <li>
             <Link to="/02-markdown-previewer">02 Markdown Previewer</Link>
             </li>
+            <li>
+            <Link to="/03-drum-machine">03 Drum Machine</Link>
+            </li>
           </ul>
         </nav>
       </div>
