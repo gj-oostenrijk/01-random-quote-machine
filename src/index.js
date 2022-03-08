@@ -1,14 +1,35 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from "react-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import App from "./App";
+import RandomQuote from "./routes/RandomQuote";
+import Home from "./routes/Home";
+import About from "./routes/About";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+const rootElement = document.getElementById("root");
+render(
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />}>
+        <Route index path="01-random-quote-machine" element={<RandomQuote />} />
+        <Route path="about" element={<About />} />
+        <Route // for all other url slugs
+          path="*"
+          element={
+            <main style={{ padding: "1rem" }}>
+              <p>There's nothing here!</p>
+            </main>
+          }
+        />  
+      </Route>
+    </Routes>
+  </BrowserRouter>,
+  rootElement
 );
 
 // If you want to start measuring performance in your app, pass a function
