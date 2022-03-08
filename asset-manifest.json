@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/01-random-quote-machine/static/css/main.57031ba1.css",
-    "main.js": "/01-random-quote-machine/static/js/main.544d49d1.js",
-    "static/js/787.3dc4c85b.chunk.js": "/01-random-quote-machine/static/js/787.3dc4c85b.chunk.js",
-    "index.html": "/01-random-quote-machine/index.html",
-    "main.57031ba1.css.map": "/01-random-quote-machine/static/css/main.57031ba1.css.map",
-    "main.544d49d1.js.map": "/01-random-quote-machine/static/js/main.544d49d1.js.map",
-    "787.3dc4c85b.chunk.js.map": "/01-random-quote-machine/static/js/787.3dc4c85b.chunk.js.map"
+    "main.css": "/fcc-projects/static/css/main.3b21f69f.css",
+    "main.js": "/fcc-projects/static/js/main.f8309e37.js",
+    "static/js/787.92893a30.chunk.js": "/fcc-projects/static/js/787.92893a30.chunk.js",
+    "index.html": "/fcc-projects/index.html",
+    "main.3b21f69f.css.map": "/fcc-projects/static/css/main.3b21f69f.css.map",
+    "main.f8309e37.js.map": "/fcc-projects/static/js/main.f8309e37.js.map",
+    "787.92893a30.chunk.js.map": "/fcc-projects/static/js/787.92893a30.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.57031ba1.css",
-    "static/js/main.544d49d1.js"
+    "static/css/main.3b21f69f.css",
+    "static/js/main.f8309e37.js"
   ]
 }
