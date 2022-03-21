@@ -1,6 +1,6 @@
 import { render } from "react-dom";
 import {
-  BrowserRouter,
+  HashRouter,
   Routes,
   Route
 } from "react-router-dom";
@@ -10,14 +10,17 @@ import App from "./App";
 import RandomQuote from "./routes/RandomQuote";
 import Home from "./routes/Home";
 import About from "./routes/About";
+import MarkdownPreviewer from "./routes/MarkdownPreviewer";
 
 const rootElement = document.getElementById("root");
 render(
-  <BrowserRouter>
+  <HashRouter>
     <Routes>
       <Route path="/" element={<App />}>
         <Route index path="01-random-quote-machine" element={<RandomQuote />} />
+        <Route path="02-markdown-previewer" element={<MarkdownPreviewer />} />
         <Route path="about" element={<About />} />
+        <Route path="home" element={<Home />} />
         <Route // for all other url slugs
           path="*"
           element={
@@ -28,7 +31,7 @@ render(
         />  
       </Route>
     </Routes>
-  </BrowserRouter>,
+  </HashRouter>,
   rootElement
 );
 

@@ -12,10 +12,10 @@ export default function App() {
               <Link to="/">Home</Link>
             </li>
             <li>
-            <Link to="/01-Random-Quote-Machine">01 Random Quote Machine</Link>
+            <Link to="/01-random-quote-machine">01 Random Quote Machine</Link>
             </li>
             <li>
-            <Link to="/02-Markdown-Previewer">02 Markdown Previewer</Link>
+            <Link to="/02-markdown-previewer">02 Markdown Previewer</Link>
             </li>
           </ul>
         </nav>
