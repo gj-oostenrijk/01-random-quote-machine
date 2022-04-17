@@ -11,6 +11,8 @@ import RandomQuote from "./routes/RandomQuote";
 import Home from "./routes/Home";
 import About from "./routes/About";
 import MarkdownPreviewer from "./routes/MarkdownPreviewer";
+import DrumMachine from "./routes/DrumMachine";
+import Calculator from "./routes/Calculator";
 
 const rootElement = document.getElementById("root");
 render(
@@ -19,6 +21,8 @@ render(
       <Route path="/" element={<App />}>
         <Route index path="01-random-quote-machine" element={<RandomQuote />} />
         <Route path="02-markdown-previewer" element={<MarkdownPreviewer />} />
+        <Route path="03-drum-machine" element={<DrumMachine />} />
+        <Route path="04-calculator" element={<Calculator />} />
         <Route path="about" element={<About />} />
         <Route path="home" element={<Home />} />
         <Route // for all other url slugs
