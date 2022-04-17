@@ -63,7 +63,8 @@ export default class DrumMachine extends React.Component {
     
     super();
     this.state = {
-      input: ""
+      input: "",
+      nowPlaying: ""
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleKeyPress = this.handleKeyPress.bind(this);
@@ -98,7 +99,8 @@ export default class DrumMachine extends React.Component {
     sound.currentTime = 0;
     sound.play();
     this.setState({
-      input: keyTrigger
+      input: keyTrigger,
+      nowPlaying: drumPadList.find(e => e.keyTrigger === keyTrigger).id
     });
     // this.activatePad();
     // setTimeout(() => this.activatePad(), 100);
@@ -107,9 +109,9 @@ export default class DrumMachine extends React.Component {
 
   render() {
     return (
-      <div id="drumMachine">
+      <div id="drum-machine">
         <div id="display">
-          Key pressed: {this.state.input}
+          Key pressed: {this.state.nowPlaying}
         </div>
 
         {drumPadList.map((drumPad, index) => (
