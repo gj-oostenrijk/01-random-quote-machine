@@ -5,22 +5,39 @@ export default class Timer extends React.Component {
   constructor() { 
     super();
     this.state = {
-      display: "0",
+      sessionSetting: 25,
+      breakSetting: 5,
+      timeLeft: Date(),
+      display: "25:00",
     };
-    this.handleNumbers = this.handleNumbers.bind(this);
-    this.handleOperator = this.handleOperator.bind(this);
-    this.handleEquals = this.handleEquals.bind(this);
+    this.handleTimerIncrement = this.handleTimerIncrement.bind(this);
   }
 
-  handleNumbers(event) {
+  handleTimerIncrement() {
 
   }
 
-  handleOperator(event) {
+  handleTimerRecrement() {
   
   } 
 
-  handleEquals() {
+  handlePauseIncrement() {
+
+  }
+
+  handlePauseDecrement() {
+  
+  } 
+
+  handleStart() {
+
+  }
+
+  handlePause() {
+
+  }
+
+  handleReset() {
 
   }
 
@@ -28,16 +45,30 @@ export default class Timer extends React.Component {
   render() {
     return (
       <>
-      <div id="calculator">
-        <pre>
-            display: {this.state.display}<br/>
-            result: {this.state.result}<br/>
-            currentOperator: {this.state.currentOperator}<br/>
-            clearDisplay: {String(this.state.clearDisplay)}
-        </pre>
-        <div id="display">
-          {this.state.display}
+      <div id="timer">
+
+        <div className='settings'>
+          <button id="break-decrement" className='incrementButton'>-1</button>
+          <span id="break-label">{this.state.breakSetting}</span>
+          <button id="break-increment" className='incrementButton' >+1</button>
         </div>
+
+        <div className='settings'>
+          <button id="session-decrement" className='incrementButton'>-1</button>
+          <div id="session-label">
+            Session Length 
+            <div id="session-length">{this.state.sessionSetting}</div>
+          </div>
+          <button id="session-increment" className='incrementButton'>+1</button>
+        </div>
+
+        <div id="timer-label">
+          Session
+          <div id="time-left">{this.state.timeLeft}</div>
+        </div>
+        <button id='start_stop'></button>
+        <button id='reset'></button>
+        
       </div>
       </>
     );
