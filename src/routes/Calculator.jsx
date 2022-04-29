@@ -2,59 +2,79 @@ import React from 'react';
 import '../App.css';
 
 export default class Calculator extends React.Component {
-  constructor() {
-    
+  constructor() { 
     super();
     this.state = {
-      display: "",
+      display: "0",
       result: 0.00,
-      currentOperator: ""
+      currentOperator: "",
+      clearDisplay: false
     };
     this.handleNumbers = this.handleNumbers.bind(this);
     this.handleOperator = this.handleOperator.bind(this);
     this.handleEquals = this.handleEquals.bind(this);
-
   }
 
   handleNumbers(event) {
     let inputNumber = String(event.target.value);
     let display = this.state.display;
 
-    if (
-      this.state.currentOperator !== "" ||
-      this.state.currentOperator === "C" 
-      ) {
-      display = inputNumber;
-    } else {
-      display = display + inputNumber;
+    if (this.state.clearDisplayOnNextInput === true ||
+      this.state.display === "0") {
+      display = "";
+    } 
+
+    if (inputNumber === "." && this.state.display.includes(".")) {
+      inputNumber = "";
     }
 
+    display = display + inputNumber;
+
     this.setState({
-        display: display
+        display: display,
+        clearDisplayOnNextInput: false
     });
   }
 
   handleOperator(event) {
     let operator = event.target.value;
+    let result = this.state.result;
 
     if (operator === "C") {
-      this.setState({
-        display: "0",
-        result: 0.00,
-        currentOperator: ""
-      });
-    } else {
-      this.setState({
-        result: Number(this.state.display),
-        currentOperator: operator
-      });
+      result = 0
+    } 
+    
+    else if (operator === "+") {
+      result = this.state.result + Number(this.state.display);
     }
+
+    else if (operator === "-") {
+      result = this.state.result - Number(this.state.display);
+    }
+
+    else if (operator === "*") {
+      result = this.state.result * Number(this.state.display);
+    }
+
+    else if (operator === "/") {
+      result = this.state.result / Number(this.state.display);
+    }
+
+    this.setState({
+      display: result,
+      result: result,
+      currentOperator: operator,
+      clearDisplayOnNextInput : true
+    });
   } 
 
   handleEquals() {
     this.setState({
-      display: "🥁"
-  });
+      display:this.state.result + Number(this.state.display),
+      result: this.state.result + Number(this.state.display),
+      currentOperator: "=",
+      clearDisplayOnNextInput : true
+    });
   }
 
 
@@ -63,10 +83,10 @@ export default class Calculator extends React.Component {
       <>
       <div id="calculator">
         <pre>
-            State <br/>
             display: {this.state.display}<br/>
             result: {this.state.result}<br/>
-            currentOperator: {this.state.currentOperator}
+            currentOperator: {this.state.currentOperator}<br/>
+            clearDisplay: {String(this.state.clearDisplay)}
         </pre>
         <div id="display">
           {this.state.display}
@@ -133,8 +153,8 @@ export default class Calculator extends React.Component {
               onClick={this.handleNumbers}>0</button>
             <button 
               className='operator'
-              value={","} 
-              onClick={this.handleOperator}>,</button>
+              value={"."} 
+              onClick={this.handleNumbers}>.</button>
             <button 
               className='operator'
               value={"x"} 
