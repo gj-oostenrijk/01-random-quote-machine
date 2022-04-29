@@ -23,6 +23,9 @@ export default function App() {
             <li>
              <Link to="/04-calculator">04 Calculator</Link>
             </li>
+            <li>
+             <Link to="/05-timer">05 Timer</Link>
+            </li>
           </ul>
         </nav>
       </div>
