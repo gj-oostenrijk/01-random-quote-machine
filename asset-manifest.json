@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/fcc-projects/static/css/main.19e01035.css",
-    "main.js": "/fcc-projects/static/js/main.486e479f.js",
+    "main.css": "/fcc-projects/static/css/main.b344c88b.css",
+    "main.js": "/fcc-projects/static/js/main.d3c4d081.js",
     "static/js/787.92893a30.chunk.js": "/fcc-projects/static/js/787.92893a30.chunk.js",
     "index.html": "/fcc-projects/index.html",
-    "main.19e01035.css.map": "/fcc-projects/static/css/main.19e01035.css.map",
-    "main.486e479f.js.map": "/fcc-projects/static/js/main.486e479f.js.map",
+    "main.b344c88b.css.map": "/fcc-projects/static/css/main.b344c88b.css.map",
+    "main.d3c4d081.js.map": "/fcc-projects/static/js/main.d3c4d081.js.map",
     "787.92893a30.chunk.js.map": "/fcc-projects/static/js/787.92893a30.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.19e01035.css",
-    "static/js/main.486e479f.js"
+    "static/css/main.b344c88b.css",
+    "static/js/main.d3c4d081.js"
   ]
 }
